@@ -1,9 +1,15 @@
-const greeting = document.getElementById("getValue");
-greeting.innerHTML = "What is your name?";
+const button = document.getElementById("button");
 const person = document.getElementById("name");
 const greetingElement = document.getElementById('showGreeting');
+const paragraph = document.createElement("p");
 
-function showGreeting(){
-   const getUser = person.value;
-   greetingElement.innerHTML = sayHello(getUser);
- }
+button.addEventListener("click", function(e){
+  e.preventDefault();
+  greetingElement.appendChild(paragraph)
+  paragraph.innerHTML = sayHello(person.value, () => {
+   return Math.floor(Math.random() * 2)
+  });
+  person.value = "";
+})
+
+

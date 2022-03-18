@@ -1,8 +1,10 @@
-function sayHello(name){
+function sayHello(name, selectorGreeting){
+const multipleGreetings = [`Hello ${name}, nice to meet you!`, `Welcome ${name}`];
     if(name === ""){
         return "Hello stranger!";
     } 
-        return `Hello ${name}, nice to meet you!`;
+    const selected = selectorGreeting();
+    return multipleGreetings[selected];
 }
 
 module.exports = sayHello;

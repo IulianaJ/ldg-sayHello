@@ -9,13 +9,13 @@
     <title>Say Hello</title>
   </head>
   <body>
-    <p id="showGreeting"></p>
+    <div id="showGreeting"></div>
     <div id="container">
-      <div id="card">
-          <div id="getValue"></div><br />
+      <form>
+          <label for="name">What is your name?</label>
           <input type="text" id="name" name="name" /><br /><br />
-          <input type="submit" onclick="showGreeting()" value="Confirm" class="btn" />
-      </div>
+          <input type="submit" id="button" value="Confirm" class="btn" />
+      </form>
     </div>
     <script src="index.js"></script>
   </body>
