@@ -1,5 +1,8 @@
 function sayHello(name){
-    return `Hello ${name}, nice to meet you!`
+    if(name === ""){
+        return "Hello stranger!";
+    } 
+        return `Hello ${name}, nice to meet you!`;
 }
 
 module.exports = sayHello;
