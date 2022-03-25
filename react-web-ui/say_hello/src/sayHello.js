@@ -1,4 +1,4 @@
-export const sayHello = (name, selectorGreeting) => {
+const sayHello = (name, selectorGreeting) => {
   const multipleGreetings = [
     `Hello ${name}, nice to meet you!`,
     `Welcome ${name}`,

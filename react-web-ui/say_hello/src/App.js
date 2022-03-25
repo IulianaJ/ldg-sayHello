@@ -1,16 +1,8 @@
 import "./App.css";
+import { sayHello } from "./sayHello";
 import { useState } from "react";
 
 function App() {
-  function sayHello(name, selectorGreeting){
-    const multipleGreetings = [`Hello ${name}, nice to meet you!`, `Welcome ${name}`];
-        if(name === ""){
-            return "Hello stranger!";
-        } 
-        const selected = selectorGreeting();
-        return multipleGreetings[selected];
-    }
-
   const [name, setName] = useState("");
 
   function handleSumbmit(e){
